@@ -22,6 +22,7 @@ const todoList = (props: Props) => {
       break;
     case 2:
       filterList = props.todoList.filter(todo => todo.completed);
+      break;
     default:
       filterList = props.todoList;
   }
