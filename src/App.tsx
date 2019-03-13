@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import GithubCorner from './components/GithubCorner/GithubCorner';
 import Navigation from './components/Navigation/Navigation';
-import Home from './views/Home';
+import Home from './views/Home/Home';
 
 class App extends Component {
   state = {
