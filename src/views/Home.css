@@ -1,0 +1,48 @@
+.Home {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding-top: 30px;
+  height: calc(100% - 50px);
+  box-sizing: border-box;
+}
+
+.Card {
+  background-color: #fff;
+  border-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.Card-Title,
+.Card-Text {
+  padding: 16px;
+}
+
+.Input-New {
+  width: 100%;
+  padding: 7px 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #888;
+  transition: border-color 0.25s;
+  font-size: 18px;
+  margin: 20px 0;
+  color: rgba(0, 0, 0, 0.87);
+}
+.Input-New:focus {
+  outline: none;
+}
+.Input-New:focus,
+.Input-New:hover {
+  border-bottom: 1px solid #222;
+}
+
+.TodoList {
+  padding: 0 20px;
+  margin: 0;
+}
+.Todo {
+  display: flex;
+  margin-bottom: 30px;
+}

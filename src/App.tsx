@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import GithubCorner from './components/GithubCorner/GithubCorner';
 import Navigation from './components/Navigation/Navigation';
+import Home from './views/Home';
 
 class App extends Component {
   state = {
@@ -20,8 +21,8 @@ class App extends Component {
           navLinks={['All Tasks', 'Active', 'Completed']}
           onActiveChange={stateIndex => this.changeActive(stateIndex)}
         />
-        <h1>Hello World</h1>
-        <GithubCorner link={'https://google.com'} />
+        <Home active={this.state.active} />
+        <GithubCorner link={'https://github.com/Mingx94/react-todo'} />
       </div>
     );
   }
