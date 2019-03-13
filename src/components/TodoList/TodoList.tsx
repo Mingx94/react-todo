@@ -11,24 +11,12 @@ type Props = {
   todoList: TodoList[];
   toggleTodo: (id: number) => void;
   removeTodo: (id: number) => void;
-  active: number;
 };
 
 const todoList = (props: Props) => {
-  let filterList;
-  switch (props.active) {
-    case 1:
-      filterList = props.todoList.filter(todo => !todo.completed);
-      break;
-    case 2:
-      filterList = props.todoList.filter(todo => todo.completed);
-      break;
-    default:
-      filterList = props.todoList;
-  }
   return (
     <ul className="TodoList">
-      {filterList.map(todo => (
+      {props.todoList.map(todo => (
         <li className="Todo" key={todo.id}>
           <div
             style={{

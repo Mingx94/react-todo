@@ -12,14 +12,11 @@ const navigation = (props: Props) => {
     <li
       className="NavigationItem"
       key={showState}
-      onClick={e => {
-        e.preventDefault();
+      onClick={() => {
         props.onActiveChange(index);
       }}
     >
-      <a href="#" className="NavigationLink">
-        {showState}
-      </a>
+      <span className="NavigationLink">{showState}</span>
     </li>
   ));
   return (

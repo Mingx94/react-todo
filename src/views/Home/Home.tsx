@@ -50,6 +50,18 @@ class Home extends Component<{ active: number }, { todoList: object[] }> {
   };
 
   render() {
+    
+  let filterList;
+  switch (this.props.active) {
+    case 1:
+      filterList = this.state.todoList.filter(todo => !todo.completed);
+      break;
+    case 2:
+      filterList = this.state.todoList.filter(todo => todo.completed);
+      break;
+    default:
+      filterList = this.state.todoList;
+  }
     return (
       <div className="Home">
         <div className="Card">
@@ -62,13 +74,12 @@ class Home extends Component<{ active: number }, { todoList: object[] }> {
               placeholder="What need to be done?"
             />
           </div>
-          {this.state.todoList.length ? (
+          {filterList.length ? (
             <div className="Card-Text">
               <TodoList
-                todoList={this.state.todoList}
+                todoList={filterList}
                 removeTodo={this.removeTodo}
                 toggleTodo={this.toggleTodo}
-                active={this.props.active}
               />
             </div>
           ) : null}
